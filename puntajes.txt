@@ -1,5 +1,3 @@
-jorge 350 100 2
-angelica 350 100 2
-sara 350 100 2
-eli 350 100 2
-leo 350 100 2
+@username @max_score @score @level @hash @control
+
+jorge 350 100 0 0 true
