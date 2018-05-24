@@ -1,3 +1,6 @@
-@username @max_score @score @level @hash @control
-
+angel 1 2 3 6 true
+leo 350 100 0 0 true
+castro 350 100 0 0 true
+camilo 350 100 0 0 true
+ali 350 100 0 0 true
 jorge 350 100 0 0 true

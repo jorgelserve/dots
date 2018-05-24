@@ -8,16 +8,15 @@ import java.util.ArrayList;
 
 public class Datos {
 
-
     public File cargarDatos() {
         try {
 
             File myFile = new File("puntajes.txt");
             if (myFile.createNewFile()){
-                System.out.println("File is created!");
+                // System.out.println("File is created!");
                 return myFile;
             }else{
-                System.out.println("File already exists.");
+                // System.out.println("Fie is loaded");
                 return myFile;
             }
         } catch (IOException e) {
