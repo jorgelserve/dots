@@ -1,6 +1,8 @@
 package dots;
 
 
+import javafx.scene.control.Tab;
+import tablero.Tablero;
 import usuario.Usuario;
 
 import javax.print.DocFlavor;
@@ -10,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
+
 
 public class Dots {
 
@@ -42,6 +45,7 @@ public class Dots {
             System.out.println(usr.username + " "  + usr.max_score + " " + usr.score + " " + usr.level + " " + usr.hash + " " + usr.control);
         } catch (Exception e) {
             System.out.println("PROBLEMA");
+            e.printStackTrace();
         }
 
     }
@@ -101,8 +105,33 @@ public class Dots {
     }
 
     public static void jugar(Usuario usr) {
-        System.out.println(usr.username + " jugando");
+        String cRESET = "\033[0;0m";
+        // int jugadas;
+        // int nivel = usr.level;
+        // System.out.println(usr.username + " jugando sdgdsgds");
+        Tablero tab = new Tablero(usr.level);
+        /* System.out.print("   ");
+        for (int i = 1; i <= tab.tab.length; i++) {
+            System.out.print("[" + i + "] ");
+        }
+        System.out.println();*/
+        for (int x = 0; x < tab.tab.length; x++) {
+            // System.out.print("[" + x + "] ");
+            for (int y = 0; y < tab.tab.length; y++) {
+                System.out.print(tab.tab[x][y].color + tab.tab[x][y].inicial + "   ");
+            }
+            System.out.println(cRESET);
+        }
+
+        /*do {
+            generarTablero(nivel);
+            do {
+
+            } while (jugadas <= 30);
+        } while (nivel <= 60);*/
     }
+
+
 
 // @username @max_score @score @level @hash @control
 
